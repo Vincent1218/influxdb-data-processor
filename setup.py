@@ -17,6 +17,8 @@ setup(
     author="Pikacent (Chai Wen Xuan)",
     author_email="<vicentchai@hotmail.com>",
     description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=long_description,
     packages=find_packages(),
     install_requires=['influxdb_client','pandas','numpy','scipy'],
     keywords=['python', 'video', 'stream', 'video stream', 'camera stream', 'sockets'],
