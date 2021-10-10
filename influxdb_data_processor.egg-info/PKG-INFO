@@ -1,4 +1,4 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: influxdb-data-processor
 Version: 0.0.1
 Summary: A data processor for data in influxDB
@@ -6,7 +6,43 @@ Home-page: UNKNOWN
 Author: Pikacent (Chai Wen Xuan)
 Author-email: <vicentchai@hotmail.com>
 License: UNKNOWN
-Description: UNKNOWN
+Description: 
+        # influxdb-data-processor
+        A data processor for data in influxDB.
+        
+        
+        Developed by Chai Wen Xuan 2021
+        
+        ## Uses:
+        - To fill in missing value cause by random error from data collector
+        - To produce fixed time sampling range data
+        
+        
+        ### Processing CSV file
+        
+        ```python
+        import pandas as pd
+        
+        from influxdbDataProcessor.processor import processcsvdata
+        
+        df = processcsvdata()
+        ```
+        
+        #### Required input:
+        1. Token
+        2. influxDb url
+        3. Organization
+        4. Bucket name
+        5. CSV file location
+        6. Sampling frequency
+        7. Data range
+        
+        #### CSV file format:
+        - Only two column ("Measurement", "Field")
+        
+        
+        
+        
 Keywords: python,video,stream,video stream,camera stream,sockets
 Platform: UNKNOWN
 Classifier: Development Status :: 1 - Planning
@@ -15,3 +51,4 @@ Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: Unix
 Classifier: Operating System :: MacOS :: MacOS X
 Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
