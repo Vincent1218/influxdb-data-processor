@@ -14,12 +14,12 @@ Developed by Chai Wen Xuan 2021
 ```python
 import pandas as pd
 
-from influxdbDataProcessor.processor import processcsvdata
+from influxdbDataProcessor.processor import processCsvData
 
-df = processcsvdata()
+df = processCsvData()
 ```
 
-#### Required input:
+#### User will be required to input:
 1. Token
 2. influxDb url
 3. Organization
@@ -29,7 +29,7 @@ df = processcsvdata()
 7. Data range (1 day: '1d', 1hour: '1h', 1 minute: '1m', 1 second: '1s')
 
 #### CSV file format:
-- Only two column ("Measurement", "Field")
+- Contains two column ("Measurement", "Field")
 
 
 ### Processing array data
@@ -37,12 +37,15 @@ df = processcsvdata()
 ```python
 import pandas as pd
 
-from influxdbDataProcessor.processor import processarraydata
+from influxdbDataProcessor.processor import processArrayData
 
-df = processarraydata(measurementArr,fieldArr)
+measurementArr = ["Air Conditioner"]
+fieldArr = ["Temperature"]
+
+df = processArrayData(measurementArr,fieldArr)
 ```
 
-#### Required input:
+#### User will be required to input:
 1. Token
 2. influxDb url
 3. Organization
@@ -50,6 +53,24 @@ df = processarraydata(measurementArr,fieldArr)
 5. Sampling frequency (1 day: '1d', 1hour: '1h', 1 minute: '1t', 1 second: '1s')
 6. Data range (1 day: '1d', 1hour: '1h', 1 minute: '1m', 1 second: '1s')
 
+### Ready input by user before calling function
+```python
+import pandas as pd
+
+from influxdbDataProcessor.processor import processArrayData
+
+df = processData(token,url,org,bucket,samplerange,length,mea,field)
+```
+
+#### User will be required to input:
+1. Token
+2. influxDb url
+3. Organization
+4. Bucket name
+5. Sampling frequency (1 day: '1d', 1hour: '1h', 1 minute: '1t', 1 second: '1s')
+6. Data range (1 day: '1d', 1hour: '1h', 1 minute: '1m', 1 second: '1s')
+7. MeasurementArr
+8. FieldArr
 
 
 

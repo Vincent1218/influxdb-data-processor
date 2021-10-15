@@ -1,2 +1,3 @@
-from influxdbDataProcessor.processor import processcsvdata
-from influxdbDataProcessor.processor import processarraydata
+from influxdbDataProcessor.processor import processCsvData
+from influxdbDataProcessor.processor import processArrayData
+from influxdbDataProcessor.processor import processData
